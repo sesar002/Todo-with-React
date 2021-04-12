@@ -46,20 +46,24 @@
 }
 .divtask {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   padding: 5px;
   border-bottom: 1px solid black;
 }
 .span {
   padding-right: 10px;
+  width: 85%;
   padding: 5px;
 }
 .filter-btns {
   margin-bottom: 30px;
 }
-.filter-btns > button {
+.linkbtn {
   padding: 7px;
   background-color: #336b87;
   color: white;
   border: 1px solid black;
+  cursor: pointer;
 }

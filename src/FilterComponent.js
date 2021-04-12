@@ -1,6 +1,7 @@
 import React from 'react';
-import {filters} from './Filters';
+import {filters, routs} from './constants';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 export default class FIlterComponent extends React.Component{
   
@@ -14,18 +15,24 @@ export default class FIlterComponent extends React.Component{
 
     return(
       <p className='filter-btns'>
-          <button 
-            style={this.getStyle(filters.ALL)}
-            onClick={() => this.props.setFilter(filters.ALL)} >All
+        <Link to={routs.ALL}>
+          <button
+            className='linkbtn'
+            style={this.getStyle(filters.ALL)}>All
           </button>
+        </Link>
+        <Link to={routs.COMPLETED}>
           <button 
-            style={this.getStyle(filters.COMPLETED)}
-            onClick={() => this.props.setFilter(filters.COMPLETED)} >Completed
+            className='linkbtn'
+            style={this.getStyle(filters.COMPLETED)}>Completed
           </button>
+        </Link>
+        <Link to={routs.NOT_COMPLETED}>
           <button 
-            style={this.getStyle(filters.NOT_COMPLETED)}
-            onClick={() => this.props.setFilter(filters.NOT_COMPLETED)} >Not completed
+            className='linkbtn'
+            style={this.getStyle(filters.NOT_COMPLETED)}>Not completed
           </button>
+        </Link>
       </p>
     )
   }
