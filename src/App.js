@@ -1,13 +1,10 @@
-import React from 'react';
-import { Route, Switch } from 'react-router';
-import { filters, routs } from './constants';
-import TodoMain from './TodoMain'
+import React from "react";
+import { Route, Switch } from "react-router";
+import { filters, routs } from "./constants";
+import TodoMain from "./TodoMain";
 
-
-export default function App(){
-
-
-  return(
+export default function App() {
+  return (
     <div>
       <Switch>
         <Route path={routs.ALL}>
@@ -19,10 +16,10 @@ export default function App(){
         <Route path={routs.NOT_COMPLETED}>
           <TodoMain filter={filters.NOT_COMPLETED} />
         </Route>
-        <Route exact path='/'>
+        <Route exact path="/">
           <TodoMain filter={filters.ALL} />
         </Route>
       </Switch>
     </div>
-  )
+  );
 }
